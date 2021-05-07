@@ -97,7 +97,7 @@ def select_filter(filter_id):
 
 def search_slot(driver):
     all_slots = driver.find_elements_by_css_selector(
-        """.slot-available-main[_ngcontent-wlg-c117] .slot-available-wrap[_ngcontent-wlg-c117] li[_ngcontent-wlg-c117] .slots-box[_ngcontent-wlg-c117] a[_ngcontent-wlg-c117]""")
+        """.slot-available-main .slot-available-wrap li .slots-box a""")
     for slot in all_slots:
         if 'no-seat' not in slot.get_attribute("class").split():
             # If slot is found
